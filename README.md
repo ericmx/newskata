@@ -1,2 +1,2 @@
 # newskata
-newskata
+newskata example
