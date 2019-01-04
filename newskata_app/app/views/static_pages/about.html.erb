@@ -1,15 +1,24 @@
-<% provide(:title, "About") %>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="author" content="Eric">
     <meta name="description" content="Eric's newskata site">
-      <title> <%= yield(:title) %></title>
+      <title> About </title>
     </head>
   <body>
+    <header>
+      <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+          <ul>
+            <%= link_to "Home", root_path %>
+            <%= link_to "About", about_path %>
+            <%= link_to "Create an account!", signup_path %>
+            </ul>
+        </div>
+      </nav>
+      </header>
       <h1>About me</h1>
-    </body>
     <p>
         Me name is Eric and I live in Columbus. You can find out more about me
         by visiting my personal site that I built with Ruby on Rails a few years ago
