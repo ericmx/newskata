@@ -1,5 +1,43 @@
-<h1>Create your account here!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Eric">
+    <meta name="description" content="Eric's newskata site">
+      <title> Home </title>
+      <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+<header>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <ul>
+        <%= link_to "Home",    root_path %>
+        <%= link_to "About",   about_path %>
+        <%= link_to "Create an account!", signup_path %>
+        </ul>
+    </div>
+  </nav>
+  </header>
+  <body>
+    <h1>Create your account here!</h1>
+    <div class="row">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
 
-<%= render 'form', user: @user %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
 
-<%= link_to 'Back', users_path %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Retype your password" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create!", class: "btn-info" %>
+    <% end %>
+  </div>
+    </body>
