@@ -1,4 +1,16 @@
-<h2> Hello </h2>
-<p>
-  The current time is: <% Time.now %>
-</p>
+<% provide(:title, "Newskata") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Eric">
+    <meta name="description" content="Eric's newskata site">
+      <title> <%= yield(:title) %> </title>
+    </head>
+  <body>
+      <h1>Welcome to Eric's news site!</h1>
+    </body>
+    <p>
+      </p>
+    </body>
+</html>
